@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>GalletaFortuna.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+GalletaFortuna.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Random</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">GalletaFortuna </span><span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">String</span><span class="s2">[] </span><span class="s1">mensajes</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">GalletaFortuna</span><span class="s2">() {</span>
+        <span class="s1">mensajes </span><span class="s2">= </span><span class="s0">new </span><span class="s1">String</span><span class="s2">[]{</span>
+                <span class="s3">&quot;El poder viene en respuesta a una necesidad, no a un deseo.&quot;</span><span class="s2">,</span>
+                <span class="s3">&quot;Vas a tener batallas duras y habrá dolor, pero eres un verdadero guerrero, así que levántate, pelea y gana.&quot;</span><span class="s2">,</span>
+                <span class="s3">&quot;Preferiría ser un mono sin cerebro que un monstruo sin corazón.&quot;</span><span class="s2">,</span>
+                <span class="s3">&quot;Aprovecha al máximo las oportunidades.&quot;</span><span class="s2">,</span>
+                <span class="s3">&quot;El futuro es lo que tú quieras hacer de él.&quot;</span><span class="s2">,</span>
+                <span class="s3">&quot;Nunca dejes de aprender.&quot;</span><span class="s2">,</span>
+                <span class="s3">&quot; el poder no es nada si no lo guía el amor.&quot;</span><span class="s2">,</span>
+                <span class="s3">&quot;Cada quién se impone sus propios límites&quot;</span><span class="s2">,</span>
+                <span class="s3">&quot;No dudes en compartir tus sueños con otros.&quot;</span><span class="s2">,</span>
+                <span class="s3">&quot;¡Soy un príncipe! ¡El príncipe de los Saiyajin! &quot;</span>
+        <span class="s2">};</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String obtenerMensajeAleatorio</span><span class="s2">() {</span>
+        <span class="s1">Random rand </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Random</span><span class="s2">();</span>
+        <span class="s0">int </span><span class="s1">indice </span><span class="s2">= </span><span class="s1">rand</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">(</span><span class="s1">mensajes</span><span class="s2">.</span><span class="s1">length</span><span class="s2">);</span>
+        <span class="s0">return </span><span class="s1">mensajes</span><span class="s2">[</span><span class="s1">indice</span><span class="s2">];</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">GalletaFortuna galleta </span><span class="s2">= </span><span class="s0">new </span><span class="s1">GalletaFortuna</span><span class="s2">();</span>
+        <span class="s1">String mensaje </span><span class="s2">= </span><span class="s1">galleta</span><span class="s2">.</span><span class="s1">obtenerMensajeAleatorio</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Tu mensaje de la fortuna es: &quot; </span><span class="s2">+ </span><span class="s1">mensaje</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
